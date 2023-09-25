@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./src/main.js" defer></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <title>FocusTimer 2.0</title>
+  
+</head>
+<body>
+  <div id="app">
+    <div id="toggle-mode">
+      <span class="sr-only">Ativar light mode!</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
+    </div>
+
+    <div class="screen1">
+    <section id="timer" class="flex">
+      <span id="minutes">00</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </section>
+
+    <section id="controls" class="flex">
+      <button 
+          data-action="toggleRunning" 
+          class="ph ph-play-circle" >
+          <span class="sr-only">iniciar contador</span>
+        </button>
+          <button class="ph ph-pause-circle"
+          data-action="toggleRunning" >
+          <span class="sr-only">pausar contador</span>
+      </button>
+      <button 
+        data-action="reset" 
+        class="ph ph-stop-circle">
+        <span class="sr-only">Reiniciar contador</span>
+      </button>
+      <button
+      class="ph ph-plus"
+      data-action="plusMin">
+      <span class="sr-only">Adicionar 5 minutos</span>
+      </button>
+      <button
+      class="ph ph-minus"
+      data-action="minusMin">
+      <span class="sr-only">Diminuir 5 minutos</span>
+      </button>
+    </section>
+  </div>
+
+    <section id="sounds">
+      <button 
+        class="ph ph-tree card"
+        data-sounds="tree">
+      </button>
+      <button 
+        class="ph ph-cloud-snow card"
+        data-sounds="snow">
+      </button>
+      <div class="grid">
+      <button 
+        class="ph ph-storefront card" 
+        data-sounds="store">
+      </button>
+      <button
+        class="ph ph-flame card"
+        data-sounds="flame">
+      </button></div>
+    </section>
+</div>
+</body>
+</html>
